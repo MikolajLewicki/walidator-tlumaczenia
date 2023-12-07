@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: 0;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  background-color: #14472b;
+  color: white;
+  overflow: hidden;
+}
+
+.left {
+  text-align: center;
+  height: 100%;
+  width: 60%;
+  background-color: white;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-shadow: 12px 0px 31px -15px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 12px 0px 31px -15px rgba(66, 68, 90, 1);
+  box-shadow: 12px 0px 31px -15px rgba(66, 68, 90, 1);
+}
+
+.left h2 {
+  font-size: 3rem;
+  color: #14472b;
+  font-weight: 700;
+}
+
+.left h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.left .uploadStep {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 1rem auto;
+}
+.left .uploadStep .uploadStepBtn {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: underline;
+}
+
+.left .uploadStep .uploadStepBtn input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+
+/* .left .fileUpload{
+  width: 100px;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  border: 2px solid #616161;
+  margin-top: 1rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  position: relative;
+}
+
+.left .fileUpload:hover {
+  border: 2px solid black;
+  transition: .3s;
+  -webkit-box-shadow: 8px 8px 24px -13px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 24px -13px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 24px -13px rgba(66, 68, 90, 1);
+}
+
+.left .fileUpload input{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+} */
+
+.right {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-y: scroll;
+  padding: 2rem;
+}
+
+.right .errorItem {
+  width: 80%;
+  padding: 1rem 0;
+  /* background-color: #afafaf; */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  text-align: center;
+  cursor: pointer;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  transition: 0.3s;
+  position: relative;
+}
+
+.right .errorItem:hover {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.right .errorItem .deleteErrorItem {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -7px;
+  right: -7px;
+  background-color: white;
+  color: red;
+  border-radius: 100%;
+  opacity: 0;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.right .errorItem:hover .deleteErrorItem {
+  opacity: 1;
+}
